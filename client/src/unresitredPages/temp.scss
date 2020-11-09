@@ -1,0 +1,65 @@
+
+.brand-logo-name{
+    font-size: 1.9rem;
+}
+.mainLogo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 50px 0px;
+}
+
+.IndexPage{
+    background-color: black;
+    width: 100%;
+}
+
+.RegistrationPage{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%; 
+}
+
+.text-muted{
+    color:#6c757d!important;
+}
+
+.text-light{
+    font-size: 1.3rem;
+    color: #f8f9fa!important;
+}
+
+.lead{
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.px-2{
+    padding-left: .5rem!important;
+}
+
+.py-5{
+    padding-bottom: 3rem!important;
+}
+
+.liCircle {
+    
+        list-style-type: circle;
+        list-style: circle; 
+       
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-white{
+    color: white;
+}
+
+.sidenav-overlay{
+    opacity: 0;
+    display: none;
+}
+

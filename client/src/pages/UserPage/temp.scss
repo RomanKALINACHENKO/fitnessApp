@@ -1,0 +1,87 @@
+.cls-2{fill:#515151;}
+
+.headerUserIcon{
+    padding: 8px;
+}
+
+.header-modal-Additional{
+    position: fixed;
+    top: 100px;
+    left: 63px;
+    height: 300px;
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba($color: #fff, $alpha: 1);
+    border-radius: 15px ;
+    padding: 5px;
+}
+.fullScreenGray{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+
+}
+
+.bolt{
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+.center{
+    text-align: center;
+}
+.headerUserleftItem{
+    padding: 8px;
+}
+
+.bg-classic{
+    background-color: #f5f5f5;
+}
+
+.custom-file-inputEdit{
+    position: absolute;
+    z-index: 2;
+    top: 220px;
+    left: auto;
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+
+//test 
+
+div.container.d-flex{
+    span {
+        display: flex;
+        width: 100%;
+        margin: 0px auto;
+    }
+    ul {
+        z-index: 0;
+        list-style: none;
+        margin: 15px 20px;
+        padding: 0;
+        
+      }
+    .Card {
+        width: 115px;
+        padding: 15px;
+        background-color: #ddd;
+        border: red 1px;
+       
+      }
+    .Card > h3 {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 0;
+      }
+    
+    .Card > img {
+    width: 100%;
+      }
+}
+
+//test 

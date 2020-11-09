@@ -1,0 +1,46 @@
+.footerBar{
+    padding: 7px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footerItem{
+    display: flex;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #111;
+}
+
+.header{
+    border: 1px solid #111;
+    position: fixed;
+    width: 100%;
+    background-color: bisque;
+    height: 50px;
+
+}
+
+.main{
+    padding-top: 55px;
+    border: 1px solid #111;
+}
+
+.footer{
+    border-top: 1px solid #111;
+    position: fixed;
+    bottom: 0px;
+    background-color: #fff;
+    width: 100%;
+    height: 65px;
+}
+/*@media
+{
+
+}
+*/

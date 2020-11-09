@@ -1,0 +1,7 @@
+.absModal{
+    position: absolute;
+    display: block;
+    transition: opacity .15s linear;
+    background-color: rgba(1,1,1,0.5);
+    overflow: auto;
+}
