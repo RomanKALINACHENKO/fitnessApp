@@ -9,6 +9,7 @@ const StandardPrograms = new Schema({
     Author:{type: String},
     AuthorUsername: {type: String},
     Program_logo:{type: String},
+    //abautProgram:{type: String},
     cycle: [
      [{
         Exercise_name: {type: String},

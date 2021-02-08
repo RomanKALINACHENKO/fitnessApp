@@ -101,19 +101,18 @@ router.post('/editUser', upload.single('Avatar'), auth, async (req, res) => {
     
     await user.save()
     
-     res.json({hi:"Обновлено!!!"})
+     res.json({hi:"Обновлено!!!"}) // testing
+     
+     
+    
+     
+    
 
-     
-    
-     
-    
-    // Принимать с Бд со свех таблиц, все данные о юзере. 
-    //Сначала сделать В монго чтобы были все таблицы и связать их 
     
   } catch (e) {
       res.status(500).json(   
         { message: 'Что-то пошло не так, попробуйте снова',
-        err:e.message}
+          err:e.message}
     )
   }
 

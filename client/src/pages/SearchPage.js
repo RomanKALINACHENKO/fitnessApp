@@ -1,89 +1,96 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { Header } from './SearchPage/Header'
-import { SpringGrid, measureItems, layout } from 'react-stonecutter'
 
-
-const Grid = measureItems(SpringGrid, { measureImages: true })
 
 const data = [
   {
     name: 'Dr. Hibbert',
-    image: require('./images/2.png')
+    Program_logo: require('./images/2.png'),
+    programType: 'for girls',
+    authorLink: '!#',
+    AuthorUsername: 'Roman Kalinachenko',
+    aboutProgram: 'weiriewkrwejkrijweirjiwerjiwe irwej irjwe iwej ulwp ulrwe ul90weul  90lurq 9wru welru el ge 9',
+    typeTraining: 'hard training'
+
   },
   {
-    name: 'Jasper',
-    image: require('./images/2.png')
+    name: 'Dr. Hibbert',
+    Program_logo: require('./images/2.png'),
+    programType: 'for girls',
+    authorLink: '!#',
+    AuthorUsername: 'Roman Kalinachenko',
+    aboutProgram: 'weiriewkrwejkrijweirjiwerjiwe irwej irjwe iwej ulwp ulrwe ul90weul  90lurq 9wru welru el ge 9',
+    typeTraining: 'hard training'
+
   },
   {
-    name: 'Lenny',
-    image: require('./images/2.png')
+    name: 'Dr. Hibbert',
+    Program_logo: require('./images/2.png'),
+    programType: 'for girls',
+    authorLink: '!#',
+    AuthorUsername: 'Roman Kalinachenko',
+    aboutProgram: 'weiriewkrwejkrijweirjiwerjiwe irwej irjwe iwej ulwp ulrwe ul90weul  90lurq 9wru welru el ge 9',
+    typeTraining: 'hard training'
+
   },
   {
-    name: 'Carl',
-    image: require('./images/2.png')
+    name: 'Dr. Hibbert',
+    Program_logo: require('./images/2.png'),
+    programType: 'for girls',
+    authorLink: '!#',
+    AuthorUsername: 'Roman Kalinachenko',
+    aboutProgram: 'weiriewkrwejkrijweirjiwerjiwe irwej irjwe iwej ulwp ulrwe ul90weul  90lurq 9wru welru el ge 9',
+    typeTraining: 'hard training'
+
   },
   {
-    name: 'Moe',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Mayor Quimby',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Mr. Burns',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Krusty the Clown',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Chief Wiggum',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Waylon Smithers',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Kent Brockman',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Arnie Pye',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Disco Stu',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Willie',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Abe Simpson',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Professor Frink',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Seymour Skinner',
-    image: require('./images/2.png')
-  },
-  {
-    name: 'Homer Simpson',
-    image: require('./images/2.png')
+    name: 'Dr. Hibbert',
+    Program_logo: require('./images/2.png'),
+    programType: 'for girls',
+    authorLink: '!#',
+    AuthorUsername: 'Roman Kalinachenko',
+    aboutProgram: 'weiriewkrwejkrijweirjiwerjiwe irwej irjwe iwej ulwp ulrwe ul90weul  90lurq 9wru welru el ge 9',
+    typeTraining: 'hard training'
+
   }
 ]
+// нужно взять сортировку с моего прошлого проэкта который редактирование таблиц и сделать поиск и фильтрацию + заменить уже те категории что сверху
+// сделать страницу деталей програмы и ещё нужно сделать кнопку добавления к юзеру програми, но перед этим изменить модель базы данных тоесть внести  ещё ключ чо будет связывать юзера и эту прогу
+// также реализовать кнопку предосмотра на странице моя колекция при добавлении своего комплекса тренеровок и заносить его в БД а потом только научиться возвращать для страницы поиска
 
-const Card = ({ title, image }) => (
+const Card = ({ title, image, authorLink, AuthorUsername, aboutProgram, typeTraining, programType  }) => (
+  
+    
+  
   <div className="Card">
-    <h3>{title}</h3>
+    <div className="headerCard">
+      <NavLink to={"link to details"}>
+      <h3>{title}</h3>
+      </NavLink>
+      <div className="header2Card">
+        <p>
+          Author: 
+          <NavLink to={authorLink}>{AuthorUsername}</NavLink>
+        </p>
+        <p>
+          Тип программы: 
+          <NavLink  to={authorLink}>{programType}</NavLink>
+        </p>
+      </div>
+    
+    </div>
+    
     <img src={image} alt={title} />
+    <div className="bodyCard">
+      <div>
+        {aboutProgram}
+      </div>
+      <div>
+        <p>Тип тренеровки: {typeTraining}</p>
+      </div>
+    </div>
+    
   </div>
 )
 
@@ -118,25 +125,20 @@ export const SearchPage = () => {
 
           </nav>
         </div>
-        <div className="container d-flex ">
-        <Grid
-        
-          component="ul"
-          columns={3}
-          columnWidth={115}
-          gutterWidth={5}
-          gutterHeight={5}
-          layout={layout.pinterest}
-          duration={800}
-        >
-          {data.map(({ name, image }) => (
-            <li key={name} >
-              <Card title={name} image={image} />
-            </li>
-          ))}
-        </Grid>
+        <div className="container d-flex  ">
+        <ul className="">
+      {data.map(({ name, Program_logo, programType, authorLink, AuthorUsername, aboutProgram, typeTraining  }) => (
+          <li key={name} >
+            <Card title={name} image={Program_logo} authorLink={authorLink}
+             AuthorUsername={AuthorUsername} aboutProgram={aboutProgram} 
+             typeTraining={typeTraining} programType={programType} />
+          </li>
+        ))}
+      </ul>
         </div>
+      
         
+
         </div>
       </div>
     )

@@ -51,8 +51,9 @@ router.get('/userdata', auth, async (req, res) => {
     
   
   } catch (e) {
-      res.status(500).json(  e.message 
-        //{ message: 'Что-то пошло не так, попробуйте снова'}
+      res.status(500).json(  
+        // e.message 
+        { message: 'Что-то пошло не так, попробуйте снова'}
     )
   }
 })

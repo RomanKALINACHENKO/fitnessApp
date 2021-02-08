@@ -40,11 +40,14 @@ const UserPage = (props) => {
               <p className="UserProperty">  Рост:&nbsp; {userData.Height} см </p>
               <p className="UserProperty "> Вес: &nbsp; {userData.Weight} кг </p>
               <p className="UserProperty "> Пол: &nbsp; {userData.Gender} </p>
-              <p className="UserProperty "> Качество сна: {/*
+              <p className="UserProperty "> Качество сна: {
+                userData.SleepQuality
+              /*
               Cделать компонент что будет отображать столько звездочек, какой показатель в БД
-              userData.SleepQuality и аналогично с другими показателями
+               и аналогично с другими показателями
               3(из 5) звездочек &nbsp;
-              */} </p>
+              */
+              } </p>
               <p className="UserProperty" > Дневная загрузка:&nbsp; {userData.Workload} </p>
               <p className="UserProperty "> Тренеровочный опыт:&nbsp;
                {userData.Training_experience} </p>
