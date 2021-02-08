@@ -1,8 +1,0 @@
-{
-  "port": 80,
-  "jwtSecret": "5f0b0d473fa6ef19a04cb96f",
-  "mongoUri": "mongodb+srv://admin:lxudG241yMrnSHk8@cluster0-thjgw.azure.mongodb.net/app?retryWrites=true&w=majority",
-  "baseUrl": "http://localhost:5000",
-  "mailerName":"offfitnessdiary@gmail.com",
-  "mailerPassword":"24na721x29x97l"
-}
