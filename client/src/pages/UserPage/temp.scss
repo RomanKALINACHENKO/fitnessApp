@@ -54,6 +54,7 @@
 //test 
 
 div.container.d-flex{
+    justify-content: center;
     span {
         display: flex;
         width: 100%;
@@ -64,14 +65,15 @@ div.container.d-flex{
         list-style: none;
         margin: 15px 20px;
         padding: 0;
+        width: 90%;
         
       }
     .Card {
-        width: 115px;
+        
         padding: 15px;
         background-color: #ddd;
         border: red 1px;
-       
+        margin: 15px 0px;
       }
     .Card > h3 {
     text-align: center;
@@ -80,7 +82,9 @@ div.container.d-flex{
       }
     
     .Card > img {
-    width: 100%;
+    
+    height: 100%;
+    background-repeat: no-repeat;
       }
 }
 

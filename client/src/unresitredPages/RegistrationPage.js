@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState, useEffect, useContext} from 'react'
 import './temp.scss'
 import {NavComponent} from './NavComponent'
 import {NavLink} from 'react-router-dom'
@@ -6,9 +6,11 @@ import './loginPage.scss'
 import './registrationPage.scss'
 import { useHttp } from '../hooks/http.hook'
 import { useMessage } from '../hooks/message.hook'
+import { AuthContext } from '../context/AuthContext'
 
 export const  RegistrationPage = () => {
   const message = useMessage()
+  const auth = useContext(AuthContext)
   const {loading, error, request, clearError} = useHttp()
 
   const [form, setform] = useState({
@@ -30,7 +32,11 @@ export const  RegistrationPage = () => {
     try {
       const data = await request('/api/auth/registration', 'POST', {...form})
       message(data.message)
-      
+      const data2 = await request('/api/auth/login', 'POST',
+       {email: form.email,
+        password: form.password
+        })
+      auth.login(data2.token, data2.userId)
     } catch (e) {
       
     }
